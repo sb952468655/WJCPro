@@ -1,0 +1,2 @@
+ALTER TABLE `caiwu_yf_fapiao`
+ADD COLUMN `fukuanOver`  tinyint(1) NOT NULL COMMENT '是否付款完成' AFTER `dt`;

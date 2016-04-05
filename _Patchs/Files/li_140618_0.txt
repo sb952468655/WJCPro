@@ -1,0 +1,2 @@
+ALTER TABLE `cangku_kucun`
+ADD COLUMN `isCheck`  tinyint(1) NOT NULL COMMENT '是否审核：0否1是，审核后的记录才统计库存' AFTER `kuweiId`;

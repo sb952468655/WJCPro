@@ -1,0 +1,1 @@
+<input name="gongxuName" type="text" id="gongxuName" value="{$arr_condition.gongxuName}" size="10" emptyText='工序' placeholder='工序' />

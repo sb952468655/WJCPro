@@ -1,0 +1,7 @@
+ALTER TABLE `pisha_cgrk`
+CHANGE COLUMN `jiagonghuId` `supplierId`  int(10) NOT NULL COMMENT '供应商id' AFTER `songhuoCode`;ALTER TABLE `pisha_llck_son`
+CHANGE COLUMN `jiagonghuId` `supplierId`  int(10) NOT NULL COMMENT '供应商id' AFTER `llckId`;
+ALTER TABLE `pisha_kucun`
+ADD COLUMN `supplierId`  int(10) NOT NULL COMMENT '供应商id' AFTER `isTuiku`;
+ALTER TABLE `pisha_plan`
+CHANGE COLUMN `jiagonghuId` `supplierId`  int(10) NOT NULL COMMENT '供应商id；' AFTER `id`;

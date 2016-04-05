@@ -1,0 +1,2 @@
+ALTER TABLE `caiwu_ar_fapiao`
+ADD COLUMN `incomeOver`  tinyint(1) NOT NULL COMMENT '收款完成' AFTER `memo`;

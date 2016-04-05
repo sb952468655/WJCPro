@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_chuku`
+ADD COLUMN `rukuId`  int(10) NOT NULL COMMENT '关联入库主表的id' AFTER `dt`;
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `chuku2proId`  int(10) NOT NULL COMMENT '对应出库明细表中的id' AFTER `ord2proId`;

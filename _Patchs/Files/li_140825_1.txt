@@ -1,0 +1,11 @@
+DROP TABLE  `caiwu_ar_income2guozhang`;
+CREATE TABLE `caiwu_ar_income2fapiao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `incomeId` int(11) NOT NULL,
+  `fapiaoId` int(11) NOT NULL,
+  `money` decimal(10,2) NOT NULL COMMENT '使用金额',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `incomeId` (`incomeId`),
+  KEY `fapiaoId` (`fapiaoId`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

@@ -1,0 +1,2 @@
+ALTER TABLE `jichu_jiagonghu`
+ADD COLUMN `isSupplier`  tinyint(1) NOT NULL COMMENT '是否供应商:1是0否' AFTER `letters`;

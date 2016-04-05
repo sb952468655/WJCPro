@@ -1,0 +1,5 @@
+ALTER TABLE `shengchan_plan2product_gongxu`
+ADD COLUMN `touliaoId`  int(10) NOT NULL COMMENT '投料Id' AFTER `plan2proId`;
+ALTER TABLE `shengchan_plan2product_touliao`
+ADD COLUMN `touliaoId`  int(10) NOT NULL COMMENT '投料Id' AFTER `plan2proId`;
+

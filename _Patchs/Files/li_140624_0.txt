@@ -1,0 +1,5 @@
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `dengji`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '等级' AFTER `planTlId`;
+ALTER TABLE `cangku_kucun`
+ADD COLUMN `dengji`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '等级' AFTER `isCheck`;ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `dengji`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '等级' AFTER `planGxId`;

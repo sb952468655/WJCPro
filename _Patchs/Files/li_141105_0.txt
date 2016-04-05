@@ -1,0 +1,2 @@
+ALTER TABLE `trade_order`
+ADD COLUMN `isSetplan`  int(1) NOT NULL COMMENT '为1表示不用设置计划' AFTER `creater`;

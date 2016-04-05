@@ -1,0 +1,6 @@
+ALTER TABLE `pisha_llck_son`
+ADD COLUMN `diaoboId`  int(11) NOT NULL COMMENT '调拨出库生成两条记录，关联id信息' AFTER `money`;ALTER TABLE `pisha_cgrk`
+ADD COLUMN `jiagonghuId`  int(10) NOT NULL COMMENT '加工户Id' AFTER `supplierId`;
+ALTER TABLE  `pisha_cgrk` ADD INDEX (  `jiagonghuId` );ALTER TABLE `jichu_jiagonghu`
+ADD COLUMN `isSelf`  tinyint(1) NOT NULL COMMENT '是否本厂：0否1是' AFTER `isSupplier`;
+ALTER TABLE  `pisha_cgrk_son` ADD INDEX (  `cgrkId` );

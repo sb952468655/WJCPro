@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_plan_son`
+ADD COLUMN `cntJian`  int(10) NOT NULL COMMENT '数量' AFTER `supplierId`;

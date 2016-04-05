@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_cgrk`
+ADD COLUMN `isGuozhang`  tinyint(1) NOT NULL COMMENT '是否过账:0是1否' AFTER `rukuDate`;

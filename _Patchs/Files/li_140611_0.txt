@@ -1,0 +1,4 @@
+ALTER TABLE `jichu_jiagonghu`
+ADD COLUMN `feeBase`  tinyint(1) NOT NULL COMMENT '加工费依据：0生产领用，1产量' AFTER `isSelf`;ALTER TABLE `pisha_plan`
+DROP COLUMN `supplierId`,
+MODIFY COLUMN `planDate`  date NOT NULL COMMENT '计划日期' AFTER `id`;

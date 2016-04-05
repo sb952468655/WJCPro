@@ -1,0 +1,58 @@
+ALTER TABLE `caiwu_yf_guozhang`
+ADD COLUMN `isY`  tinyint(1) NOT NULL COMMENT ' 0 非加工过账 1 根据验收过账；2 根据发料过账' AFTER `isJiagong`;
+
+ALTER TABLE `caiwu_yf_guozhang`
+ADD COLUMN `chukuId`  int(11) NOT NULL AFTER `rukuId`;
+
+
+CREATE TABLE `jichu_feiyong` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `feiyongName` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '费用名称',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='其他费用类别';
+
+CREATE TABLE `caiwu_xianjin` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `kind` tinyint(1) NOT NULL DEFAULT '0' COMMENT '收款类型：0为现金张；1为银行帐',
+  `bankId` int(11) NOT NULL COMMENT '银行id',
+  `payCode` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '付款编码',
+  `shoukuanfang` varchar(40) COLLATE utf8_bin NOT NULL COMMENT '收款方',
+  `pingzhengCode` varchar(50) COLLATE utf8_bin NOT NULL,
+  `itemId` int(10) NOT NULL COMMENT '支出科目id',
+  `itemName` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '付款项目定义',
+  `payDate` date NOT NULL COMMENT '付款日期',
+  `comeDate` date NOT NULL COMMENT '往来日期',
+  `money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '付款金额',
+  `fkType` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '付款方式',
+  `zhanghuId` int(10) NOT NULL COMMENT '账户id',
+  `isShenhe` tinyint(1) NOT NULL COMMENT '是否审核',
+  `memo` varchar(200) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  `creater` int(10) NOT NULL COMMENT '创建人',
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `shoukuan` (`shoukuanfang`),
+  KEY `payCode` (`payCode`),
+  KEY `payDate` (`payDate`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='财务费用支出登记表，caiwu_payment表主要在外加工付款，染色费，整理费，浆缸费付款时用到';
+
+CREATE TABLE `caiwu_income` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `kind` smallint(1) NOT NULL COMMENT '收款类型：0为现金张；1为银行帐',
+  `itemId` int(10) NOT NULL COMMENT '科目id',
+  `zhifuWay` char(10) NOT NULL,
+  `bankId` int(10) NOT NULL COMMENT '账户id',
+  `dakuanfang` varchar(20) NOT NULL COMMENT '打款方',
+  `incomeDate` date NOT NULL COMMENT '收款日期',
+  `incomeCode` varchar(20) NOT NULL COMMENT '收款单号',
+  `money` decimal(20,2) NOT NULL COMMENT '收款金额',
+  `isShenhe` tinyint(1) NOT NULL COMMENT '是否审核',
+  `memo` varchar(100) NOT NULL COMMENT '备注',
+  `creater` int(10) NOT NULL,
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `itemId` (`itemId`),
+  KEY `bankId` (`bankId`),
+  KEY `dakuanfang` (`dakuanfang`),
+  KEY `incomeDate` (`incomeDate`),
+  KEY `kind` (`kind`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='财务收入表'

@@ -1,0 +1,15 @@
+ALTER TABLE `pisha_cgrk`
+DROP COLUMN `gongxuId`,
+MODIFY COLUMN `rukuDate`  date NOT NULL COMMENT '入库日期' AFTER `jiagonghuId`;
+
+ALTER TABLE `pisha_cgrk`
+ADD COLUMN `gongxuName`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '工序名称' AFTER `rukuDate`;
+
+ALTER TABLE `pisha_llck`
+ADD COLUMN `gongxuName`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '工序名称' AFTER `chukuCode`;
+
+ALTER TABLE `shengchan_scrk`
+CHANGE COLUMN `gongxuId` `gongxuName`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '工序名称，加工类型' AFTER `isGuozhang`;
+
+ALTER TABLE `shengchan_scck`
+CHANGE COLUMN `gongxuId` `gongxuName`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '工序名称，加工类别' AFTER `isGuozhang`;

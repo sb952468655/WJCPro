@@ -1,0 +1,2 @@
+ALTER TABLE `caiwu_yf_guozhang`
+ADD COLUMN `isJiagong`  tinyint(1) NOT NULL COMMENT '是否加工费' AFTER `_money`;

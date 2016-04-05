@@ -1,0 +1,8 @@
+ALTER TABLE `pisha_llck`
+DROP COLUMN `planId`,
+DROP COLUMN `orderId`,
+MODIFY COLUMN `kind`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '出库类型' AFTER `id`;
+
+ALTER TABLE `pisha_llck_son`
+ADD COLUMN `plan2proId`  int(11) NOT NULL COMMENT '生产计划子表id' AFTER `id`;
+ALTER TABLE  `pisha_llck_son` ADD INDEX (  `plan2proId` );

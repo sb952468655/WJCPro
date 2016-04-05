@@ -1,0 +1,2 @@
+ALTER TABLE `caiwu_yf_guozhang`
+ADD COLUMN `isLingyong`  tinyint(1) NOT NULL COMMENT '是否领用出库记录' AFTER `isJiagong`;

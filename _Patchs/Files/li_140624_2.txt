@@ -1,0 +1,8 @@
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `orderId`  int(10) NOT NULL AFTER `type`;
+ALTER TABLE `cangku_chuku`
+ADD COLUMN `orderId`  int(10) NOT NULL COMMENT '订单id' AFTER `kind`;
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `ord2proId`  int(10) NOT NULL COMMENT '订单明细id' AFTER `dengji`;
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `ord2proId`  int(10) NOT NULL COMMENT '订单明细id' AFTER `dengji`;

@@ -1,0 +1,3 @@
+ALTER TABLE `trade_order`
+MODIFY COLUMN `warpShrink`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '经向缩率' AFTER `checking`,
+MODIFY COLUMN `weftShrink`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '纬向缩率' AFTER `warpShrink`;

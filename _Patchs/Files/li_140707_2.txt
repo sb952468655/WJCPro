@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `isJiagong`  tinyint(1) NOT NULL COMMENT '是否加工，0否1是，加工的是计算加工费' AFTER `isGuozhang`;
+ALTER TABLE `cangku_chuku`
+ADD COLUMN `isJiagong`  tinyint(1) NOT NULL COMMENT '是否加工，0否1是' AFTER `isGuozhang`;

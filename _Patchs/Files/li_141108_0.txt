@@ -1,0 +1,8 @@
+ALTER TABLE `trade_order2product`
+ADD COLUMN `isViewOver`  tinyint(1) NOT NULL COMMENT '是否完成' AFTER `dt`;ALTER TABLE `shengchan_plan2product`
+ADD COLUMN `isViewOver`  tinyint(1) NULL COMMENT '生产计划明细是否完成' AFTER `pibuCnt`;
+ALTER TABLE `shengchan_plan2product`
+MODIFY COLUMN `isViewOver`  tinyint(1) NOT NULL DEFAULT 0 COMMENT '生产计划明细是否完成' AFTER `pibuCnt`;
+
+
+

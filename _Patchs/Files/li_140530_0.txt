@@ -1,0 +1,3 @@
+ALTER TABLE `trade_order`
+ADD COLUMN `orderKind`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '大货/大样' AFTER `kind`;ALTER TABLE `trade_order`
+MODIFY COLUMN `orderKind`  tinyint(1) NOT NULL COMMENT '0大货/1大样' AFTER `kind`;

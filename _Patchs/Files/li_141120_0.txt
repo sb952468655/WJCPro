@@ -1,0 +1,2 @@
+ALTER TABLE `shengchan_plan2product_touliao`
+ADD COLUMN `psPlan2proId`  int(10) NOT NULL COMMENT '坯纱采购计划明细表id' AFTER `supplierId`;

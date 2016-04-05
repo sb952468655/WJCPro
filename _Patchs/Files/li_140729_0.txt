@@ -1,0 +1,5 @@
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `hzl`  tinyint(1) NOT NULL COMMENT '是否为后整理:0否1是' AFTER `type`;
+ALTER TABLE `cangku_chuku`
+ADD COLUMN `hzl`  tinyint(1) NOT NULL COMMENT '是否为后整理：0否1是' AFTER `kind`;ALTER TABLE `cangku_kucun`
+ADD COLUMN `hzl`  tinyint(1) NOT NULL COMMENT '后整理：0否1是' AFTER `dengji`;

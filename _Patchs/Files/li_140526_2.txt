@@ -1,0 +1,3 @@
+ALTER TABLE `pisha_llck`
+ADD COLUMN `clientId`  int(10) NOT NULL COMMENT '客户id' AFTER `kind`,
+ADD COLUMN `departmentId`  int(10) NOT NULL COMMENT '部门id' AFTER `clientId`;

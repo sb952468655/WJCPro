@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_chuku`
+ADD COLUMN `addressCk`  varchar(100) CHARACTER SET utf8 NOT NULL COMMENT '发货地址' AFTER `rukuId`,
+ADD COLUMN `people`  varchar(50) CHARACTER SET utf8 NOT NULL COMMENT '联系人' AFTER `addressCk`,
+ADD COLUMN `phone`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '联系电话' AFTER `people`;

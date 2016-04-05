@@ -1,0 +1,5 @@
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `isFanxiu`  tinyint(1) NOT NULL COMMENT '是否返修：0否1是' AFTER `llCnt`;ALTER TABLE `cangku_chuku`
+ADD COLUMN `isFanxiu`  tinyint(1) NOT NULL COMMENT '是否返修：0否1是' AFTER `phone`;
+
+

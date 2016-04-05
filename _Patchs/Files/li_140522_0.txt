@@ -1,0 +1,6 @@
+ALTER TABLE `pisha_kucun`
+ADD COLUMN `gongxuName`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '工序名称；库位（如：本厂，求精染色……）' AFTER `moneyFasheng`;ALTER TABLE `pisha_kucun`
+CHANGE COLUMN `danjiaFasheng` `danjia`  decimal(15,6) NOT NULL COMMENT '单价' AFTER `cntFasheng`,
+ADD COLUMN `isTuiku`  tinyint(1) NOT NULL COMMENT ' 是否退库：0否1是' AFTER `gongxuName`;ALTER TABLE `pisha_cgrk`
+ADD COLUMN `isTuiku`  tinyint(1) NOT NULL COMMENT '是否退库：0否1是' AFTER `dt`;ALTER TABLE `pisha_cgrk`
+MODIFY COLUMN `isTuiku`  tinyint(1) NOT NULL COMMENT '是否退库入库（可能是下面流程退回来重新入库的，标记下）：0否1是' AFTER `dt`;

@@ -1,0 +1,6 @@
+ALTER TABLE `cangku_ruku`
+DROP COLUMN `orderId`,
+MODIFY COLUMN `cgPlanId`  int(10) NOT NULL COMMENT '采购计划id' AFTER `hzl`;
+ALTER TABLE `cangku_chuku`
+DROP COLUMN `orderId`,
+MODIFY COLUMN `clientId`  int(10) NOT NULL COMMENT '客户id' AFTER `hzl`;

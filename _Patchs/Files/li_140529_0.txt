@@ -1,0 +1,6 @@
+ALTER TABLE `shengchan_plan2product`
+MODIFY COLUMN `memo`  varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '备注' AFTER `cntShengchan`,
+ADD COLUMN `menfu`  varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '门幅' AFTER `memo`,
+ADD COLUMN `kezhong`  varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '克重' AFTER `menfu`;ALTER TABLE `jichu_product`
+MODIFY COLUMN `zhonglei`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL AFTER `kind`,
+ADD COLUMN `chengfenPer`  varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '成分比列' AFTER `memo`;

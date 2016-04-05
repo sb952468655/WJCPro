@@ -1,0 +1,3 @@
+ALTER TABLE `cangku_ruku`
+DROP COLUMN `supplierId`,
+MODIFY COLUMN `jiagonghuId`  int(10) NOT NULL COMMENT '加工户Id' AFTER `songhuoCode`;

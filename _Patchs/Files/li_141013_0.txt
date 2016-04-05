@@ -1,0 +1,17 @@
+CREATE TABLE `shengchan_plan_touliao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `touliaoCode` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '投料编号',
+  `touliaoDate` date NOT NULL COMMENT '投料设置日期',
+  `creater` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '创建人',
+  `dt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'dt',
+  PRIMARY KEY (`id`),
+  KEY `touliaoCode` (`touliaoCode`),
+  KEY `touliaoDate` (`touliaoDate`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='投料设置主表';CREATE TABLE `shengchan_plan_touliao2product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `touliaoId` int(10) NOT NULL,
+  `plan2proId` int(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `touliaoId` (`touliaoId`),
+  KEY `plan2protId` (`plan2proId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='投料与生产计划的关系表';

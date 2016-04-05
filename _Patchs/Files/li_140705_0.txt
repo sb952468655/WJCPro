@@ -1,0 +1,4 @@
+ALTER TABLE `sunhao_llck_son`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `sunhao_huishou_son`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `planGxId`;

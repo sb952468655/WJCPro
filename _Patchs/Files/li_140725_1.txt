@@ -1,0 +1,7 @@
+ALTER TABLE `cangku_kucun`
+DROP COLUMN `jiagonghuId`,
+DROP COLUMN `supplierId`,
+DROP COLUMN `menfu`,
+DROP COLUMN `kezhong`,
+MODIFY COLUMN `productId`  int(11) NOT NULL COMMENT '原料id' AFTER `ganghao`,
+MODIFY COLUMN `kuweiId`  int(10) NOT NULL COMMENT '库位Id' AFTER `money`;

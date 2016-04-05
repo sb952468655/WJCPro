@@ -1,0 +1,15 @@
+CREATE TABLE `cangku_madan` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `ruku2proId` int(10) NOT NULL COMMENT '码单主表id',
+  `number` smallint(4) NOT NULL COMMENT '件号',
+  `cnt` decimal(10,2) NOT NULL COMMENT '码数',
+  `cntFormat` varchar(100) COLLATE utf8_bin NOT NULL,
+  `cntM` decimal(10,2) NOT NULL COMMENT '数量',
+  `cnt_M` varchar(100) CHARACTER SET utf8 NOT NULL COMMENT '米数的字符串形式',
+  `lot` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '质量等级',
+  `chuku2proId` int(11) NOT NULL COMMENT '出库明细表id',
+  PRIMARY KEY (`id`),
+  KEY `ruku2proId` (`ruku2proId`),
+  KEY `chuku2proId` (`chuku2proId`),
+  KEY `number` (`number`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='码单登表';

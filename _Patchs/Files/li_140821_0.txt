@@ -1,0 +1,4 @@
+ALTER TABLE `jichu_product`
+ADD COLUMN `jixing`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '机型' AFTER `viewPer`;
+ALTER TABLE `jichu_product_chengfen`
+ADD COLUMN `xianchang`  varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '线长' AFTER `sort`;

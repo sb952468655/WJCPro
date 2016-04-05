@@ -1,0 +1,1 @@
+DROP TABLE `pisha_cgrk`, `pisha_cgrk_son`, `pisha_kucun`, `pisha_llck`, `pisha_llck_son`, `shengchan_kucun`, `shengchan_scck`, `shengchan_scck_son`, `shengchan_scrk`, `shengchan_scrk_son`;

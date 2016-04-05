@@ -1,0 +1,2 @@
+ALTER TABLE  `cangku_kucun` ADD INDEX (  `dateFasheng` );
+ALTER TABLE  `cangku_kucun` ADD INDEX (  `ganghao` );

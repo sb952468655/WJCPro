@@ -1,0 +1,10 @@
+CREATE TABLE `trade_order_feiyong` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `feiyongName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '费用类别',
+  `orderId` int(10) NOT NULL,
+  `qtMoney` decimal(10,2) NOT NULL COMMENT '金额',
+  `qtmemo` varchar(100) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  KEY `orderId` (`orderId`),
+  KEY `feiyongName` (`feiyongName`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='订单其他费用登记';

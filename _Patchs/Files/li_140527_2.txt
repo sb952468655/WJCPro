@@ -1,0 +1,9 @@
+ALTER TABLE `pisha_kucun`
+DROP COLUMN `gongxuName`,
+MODIFY COLUMN `isTuiku`  tinyint(1) NOT NULL COMMENT ' 是否退库：0否1是' AFTER `moneyFasheng`;
+ALTER TABLE `pisha_cgrk`
+DROP COLUMN `gongxuName`,
+MODIFY COLUMN `memo`  varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '备注' AFTER `isGuozhang`;
+ALTER TABLE `pisha_llck`
+DROP COLUMN `gongxuName`,
+MODIFY COLUMN `isGuozhang`  tinyint(1) NOT NULL COMMENT '是否过账：0否1是' AFTER `chukuCode`;

@@ -1,0 +1,6 @@
+ALTER TABLE `jichu_kuwei`
+MODIFY COLUMN `kuweiName`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '库位名称，仓库全程' AFTER `id`,
+ADD COLUMN `jiagonghuId`  int(10) NOT NULL COMMENT '加工户Id' AFTER `memo`,
+ADD COLUMN `kuwei`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '仓库名称' AFTER `jiagonghuId`;
+ALTER TABLE `jichu_kuwei`
+ADD COLUMN `letters`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'kuweiName的首字母' AFTER `kuwei`;

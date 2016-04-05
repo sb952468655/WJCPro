@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `cntM`  decimal(15,2) NOT NULL COMMENT '数量（M）' AFTER `cnt`;
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `cntM`  decimal(10,2) NOT NULL COMMENT '数量（M）' AFTER `cnt`;

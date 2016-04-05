@@ -1,0 +1,19 @@
+ALTER TABLE `trade_order2product`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `shengchan_plan2product`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `shengchan_plan2product_touliao`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `pisha_plan_son`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `cangku_ruku_son`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `cangku_kucun`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `type`;
+ALTER TABLE `cangku_chuku_son`
+MODIFY COLUMN `color`  varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;
+ALTER TABLE `caiwu_yf_guozhang`
+MODIFY COLUMN `qitaMemo`  varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '批号' AFTER `bizhong`;
+ALTER TABLE `caiwu_ar_guozhang`
+MODIFY COLUMN `qitaMemo`  varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '其他描述' AFTER `chukuDate`;
+

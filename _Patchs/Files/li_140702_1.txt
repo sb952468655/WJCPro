@@ -1,0 +1,8 @@
+ALTER TABLE `trade_order2product`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `shengchan_plan2product`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `shengchan_plan2product_touliao`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `pisha_plan_son`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `productId`;ALTER TABLE `cangku_kucun`
+ADD COLUMN `color`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '颜色' AFTER `type`;

@@ -1,0 +1,1 @@
+ALTER TABLE  `pisha_kucun` ADD INDEX (  `rukuId` );ALTER TABLE  `pisha_kucun` ADD INDEX (  `chukuId` );ALTER TABLE  `pisha_kucun` ADD INDEX (  `jiagonghuId` );ALTER TABLE  `pisha_kucun` ADD INDEX (  `supplierId` );ALTER TABLE  `pisha_kucun` ADD INDEX (  `productId` );ALTER TABLE  `pisha_llck` ADD INDEX (  `clientId` );ALTER TABLE  `pisha_llck` ADD INDEX (  `jiagonghuId` );

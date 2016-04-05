@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_plan`
+CHANGE COLUMN `supplierId` `jiagonghuId`  int(10) NOT NULL COMMENT '供应商id；供应商与加工户合并在一张表中，所以取名加工户Id' AFTER `id`;

@@ -1,0 +1,4 @@
+ALTER TABLE `jichu_product_chengfen`
+MODIFY COLUMN `chengfenPer`  decimal(10,1) NOT NULL COMMENT '百分比' AFTER `productId`;
+ALTER TABLE `shengchan_plan2product_touliao`
+MODIFY COLUMN `chengfenPer`  decimal(10,1) NOT NULL COMMENT '百分比' AFTER `productId`;

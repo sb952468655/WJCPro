@@ -1,0 +1,3 @@
+ALTER TABLE `pisha_llck`
+ADD COLUMN `peolingliao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '领料人' AFTER `departmentId`;ALTER TABLE `pisha_llck`
+ADD COLUMN `isCheck`  tinyint(1) NOT NULL COMMENT '是否审核：0否1是' AFTER `clientId`;

@@ -1,0 +1,1 @@
+<input name="compName" type="text" id="compName" value="{$arr_condition.compName}" size="10" emptyText='付款方' placeholder='付款方'>

@@ -1,0 +1,6 @@
+DROP TABLE  `chengpin_cpck` ,
+`chengpin_cpck2product` ,
+`chengpin_cprk` ,
+`chengpin_cprk2product` ,
+`chengpin_kucun` ,
+`chengpin_madan_son` ;

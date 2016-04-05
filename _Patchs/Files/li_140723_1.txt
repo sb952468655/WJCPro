@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '本厂缸号' AFTER `pihao`;ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '本厂缸号' AFTER `pihao`;ALTER TABLE `cangku_kucun`
+ADD COLUMN `ganghao`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '本厂缸号' AFTER `pihao`;

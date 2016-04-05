@@ -1,0 +1,26 @@
+CREATE TABLE `caiwu_yf_fapiao2guozhang` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `fapiaoId` int(10) NOT NULL COMMENT '发票Id',
+  `guozhangId` int(10) NOT NULL COMMENT '过账表ID，应收id',
+  `money` decimal(10,2) NOT NULL COMMENT '关联金额，开票金额',
+  `orderId` int(10) NOT NULL COMMENT '订单id',
+  `ord2proId` int(10) NOT NULL COMMENT '订单明细id',
+  `planId` int(10) NOT NULL COMMENT '计划主表id',
+  `plan2proId` int(10) NOT NULL COMMENT '计划明细id',
+  `memo` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  KEY `fapiaoId` (`fapiaoId`),
+  KEY `guozhangId` (`guozhangId`),
+  KEY `orderId` (`orderId`),
+  KEY `ord2proId` (`ord2proId`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='发票稽核应收款中间表';
+CREATE TABLE `caiwu_yf_fukuan2fapiao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fukuanId` int(11) NOT NULL,
+  `fapiaoId` int(11) NOT NULL,
+  `money` decimal(10,2) NOT NULL COMMENT '使用金额',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fukuanId` (`fukuanId`),
+  KEY `fapiaoId` (`fapiaoId`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;

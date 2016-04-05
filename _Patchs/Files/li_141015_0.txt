@@ -1,0 +1,2 @@
+ALTER TABLE  `oa_message` ADD INDEX (  `kindName` );
+ALTER TABLE  `oa_message_class` ADD INDEX (  `className` );

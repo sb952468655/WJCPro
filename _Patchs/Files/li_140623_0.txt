@@ -1,0 +1,6 @@
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cntCi`;
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cntCi`;
+ALTER TABLE `cangku_kucun`
+ADD COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cntCi`;

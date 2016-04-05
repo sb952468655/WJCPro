@@ -1,0 +1,7 @@
+DROP TABLE  `caiwu_ar_fapiao` ,
+`caiwu_ar_guozhang` ,
+`caiwu_ar_income` ,
+`caiwu_bank_copy` ,
+`caiwu_yf_fapiao` ,
+`caiwu_yf_fukuan` ,
+`caiwu_yf_guozhang` ;

@@ -1,0 +1,1 @@
+DROP TABLE `sunhao_huishou`, `sunhao_huishou_son`, `sunhao_llck`, `sunhao_llck_son`;

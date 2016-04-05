@@ -1,0 +1,12 @@
+CREATE TABLE `caiwu_ar_income2guozhang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `incomeId` int(11) NOT NULL,
+  `guozhangId` int(11) NOT NULL,
+  `money` decimal(10,2) NOT NULL COMMENT '金额',
+  `orderId` int(10) NOT NULL COMMENT '订单id',
+  `ord2proId` int(10) NOT NULL COMMENT '订单明细id',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `incomeId` (`incomeId`),
+  KEY `guozhangId` (`guozhangId`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin

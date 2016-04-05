@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_plan`
+ADD COLUMN `daohuoDate`  date NOT NULL COMMENT '预计交期' AFTER `plan2proId`;

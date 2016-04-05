@@ -1,0 +1,14 @@
+CREATE TABLE `caiwu_ar_income2guozhang` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `incomeId` int(10) NOT NULL COMMENT '发票Id',
+  `guozhangId` int(10) NOT NULL COMMENT '过账表ID，应收id',
+  `money` decimal(10,2) NOT NULL COMMENT '关联金额，开票金额',
+  `orderId` int(10) NOT NULL COMMENT '订单id',
+  `ord2proId` int(10) NOT NULL COMMENT '订单明细id',
+  `memo` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  PRIMARY KEY (`id`),
+  KEY `incomeId` (`incomeId`),
+  KEY `guozhangId` (`guozhangId`),
+  KEY `orderId` (`orderId`),
+  KEY `ord2proId` (`ord2proId`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='收款稽核应收款中间表';

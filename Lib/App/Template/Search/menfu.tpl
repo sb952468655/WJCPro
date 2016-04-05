@@ -1,0 +1,1 @@
+<input name="menfu" type="text" id="menfu" value="{$arr_condition.menfu}" size="10" emptyText='门幅' placeholder='门幅' />

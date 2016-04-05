@@ -1,0 +1,25 @@
+CREATE TABLE `shengchan_plan2product_touliao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `plan2proId` int(11) NOT NULL,
+  `productId` int(11) NOT NULL,
+  `chengfenPer` decimal(10,2) NOT NULL COMMENT '百分比',
+  `sunhao` decimal(10,2) NOT NULL COMMENT '损耗',
+  `cntKg` decimal(10,2) NOT NULL COMMENT '计划投料(Kg)',
+  `memoView` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '备注描述',
+  `orderLine` smallint(2) NOT NULL COMMENT '顺序',
+  `supplierId` int(10) NOT NULL COMMENT '供应商id',
+  PRIMARY KEY (`id`),
+  KEY `plan2proId` (`plan2proId`),
+  KEY `productId` (`productId`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='生产计划投料设置';CREATE TABLE `jichu_product_chengfen` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `proId` int(10) NOT NULL COMMENT '主表id,外键字段',
+  `productId` int(10) NOT NULL COMMENT '坯纱/色纱对应的id',
+  `chengfenPer` decimal(10,2) NOT NULL COMMENT '百分比',
+  `memoView` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '备注描述',
+  `sort` int(10) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`),
+  KEY `proId` (`proId`),
+  KEY `productId` (`productId`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='成分比列表';ALTER TABLE `shengchan_plan2product`
+ADD COLUMN `pibuCnt`  decimal(10,2) NOT NULL COMMENT '坯布数量(Kg)' AFTER `kezhong`;

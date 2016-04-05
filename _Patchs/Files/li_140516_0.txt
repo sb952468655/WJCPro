@@ -1,0 +1,13 @@
+ALTER TABLE `jichu_jiagonghu`
+ADD COLUMN `letters`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '首字母' AFTER `gongxuId`;
+CREATE TABLE `jichu_jitai` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `jitaiName` varchar(50) COLLATE utf8_bin NOT NULL COMMENT '机台名称',
+  `jitaiCode` varchar(20) COLLATE utf8_bin NOT NULL COMMENT '机台编号',
+  `memo` varchar(100) COLLATE utf8_bin NOT NULL COMMENT '备注',
+  `orderLine` int(10) NOT NULL COMMENT '排序',
+  PRIMARY KEY (`id`),
+  KEY `jitaiCode` (`jitaiCode`),
+  KEY `orderLine` (`orderLine`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='机台基础档案';ALTER TABLE `jichu_employ`
+ADD COLUMN `letters`  varchar(20) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '首字母' AFTER `paixu`;

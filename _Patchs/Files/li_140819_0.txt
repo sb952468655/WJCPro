@@ -1,0 +1,4 @@
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `isHaveGz`  tinyint(1) NOT NULL COMMENT '已经过账：0否1是2不需要过账' AFTER `chuku2proId`;
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `isHaveGz`  tinyint(1) NOT NULL COMMENT '已经过账：0否1是2不需要过账' AFTER `shahao`;

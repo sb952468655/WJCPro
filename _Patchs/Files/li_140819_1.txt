@@ -1,0 +1,5 @@
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `cntM`  decimal(10,2) NOT NULL COMMENT '数量M' AFTER `dt`;
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `fapiaoOver`  tinyint(1) NOT NULL COMMENT '是否发票完成：0否1是' AFTER `cntM`;
+

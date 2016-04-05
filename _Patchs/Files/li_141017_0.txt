@@ -1,0 +1,2 @@
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `llCnt`  int(2) NOT NULL COMMENT '领料选择的次数' AFTER `dt`;

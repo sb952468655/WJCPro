@@ -1,0 +1,1 @@
+<input name="pinzhong" type="text" id="pinzhong" value="{$arr_condition.pinzhong}" size="10" emptyText='品种' placeholder='品种' />

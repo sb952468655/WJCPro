@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_plan`
+CHANGE COLUMN `isOver` `isCheck`  int(1) NOT NULL DEFAULT 0 COMMENT '是否审核：0否1是' AFTER `planCode`;

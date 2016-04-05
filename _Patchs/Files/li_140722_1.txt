@@ -1,0 +1,10 @@
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `diaoboId`  int(10) NOT NULL COMMENT '出库发外，调拨关联出库明细表id' AFTER `ord2proId`;
+ALTER TABLE `cangku_ruku`
+ADD COLUMN `dbId`  int(10) NOT NULL COMMENT '出库发外，调拨id,关联出库主表id' AFTER `isJiagong`;
+ALTER TABLE `cangku_chuku`
+DROP COLUMN `dbId`,
+MODIFY COLUMN `kuweiId`  int(10) NOT NULL COMMENT '库位id' AFTER `memo`;
+ALTER TABLE `cangku_chuku_son`
+DROP COLUMN `diaoboId`,
+MODIFY COLUMN `memoView`  varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '明细备注' AFTER `money`;

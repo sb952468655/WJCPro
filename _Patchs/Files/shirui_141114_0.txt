@@ -1,0 +1,10 @@
+ALTER TABLE `caiwu_yf_guozhang`
+DROP COLUMN `chukuId`,
+DROP COLUMN `isY`,
+MODIFY COLUMN `ruku2ProId`  int(11) NOT NULL AFTER `rukuId`,
+MODIFY COLUMN `isLingyong`  tinyint(1) NOT NULL COMMENT '是否领用出库记录' AFTER `isJiagong`;
+
+
+ALTER TABLE `caiwu_ar_guozhang`
+ADD COLUMN `zhekouMoney`  decimal(10,3) NOT NULL AFTER `clientId`,
+ADD COLUMN `_money`  decimal(15,3) NOT NULL COMMENT '发生金额，入库单价*数量' AFTER `zhekouMoney`;

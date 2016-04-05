@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_llck`
+ADD COLUMN `dbId`  int(10) NOT NULL COMMENT '调拨id,方便同时对两条数据进行处理' AFTER `memo`;

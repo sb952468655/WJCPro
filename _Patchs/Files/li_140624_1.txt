@@ -1,0 +1,8 @@
+ALTER TABLE `cangku_kucun`
+DROP COLUMN `cntCi`,
+MODIFY COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cnt`;
+ALTER TABLE `cangku_chuku_son`
+DROP COLUMN `cntCi`,
+MODIFY COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cnt`;ALTER TABLE `cangku_ruku_son`
+DROP COLUMN `cntCi`,
+MODIFY COLUMN `cntJian`  int(10) NOT NULL COMMENT '件数' AFTER `cnt`;

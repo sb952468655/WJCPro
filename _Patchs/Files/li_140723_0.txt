@@ -1,0 +1,8 @@
+ALTER TABLE `cangku_chuku_son`
+ADD COLUMN `menfu`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '门幅（M）' AFTER `pihao`,
+ADD COLUMN `kezhong`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '克重（g/m2）' AFTER `menfu`;
+ALTER TABLE `cangku_ruku_son`
+ADD COLUMN `menfu`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '门幅（M）' AFTER `pihao`,
+ADD COLUMN `kezhong`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '克重（g/m2）' AFTER `menfu`;ALTER TABLE `cangku_kucun`
+ADD COLUMN `menfu`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '门幅（M）' AFTER `dengji`,
+ADD COLUMN `kezhong`  varchar(10) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '克重（g/m2）' AFTER `menfu`;

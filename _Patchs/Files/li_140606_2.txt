@@ -1,0 +1,5 @@
+ALTER TABLE `pisha_plan_son`
+ADD COLUMN `plan2tlId`  int(10) NOT NULL COMMENT '计划明细表投料表id' AFTER `money`;
+ALTER TABLE `pisha_plan`
+ADD COLUMN `plan2proId`  int(10) NOT NULL COMMENT '生产计划明细表id' AFTER `dt`;ALTER TABLE `pisha_plan_son`
+ADD COLUMN `supplierId`  int(10) NOT NULL COMMENT '供应商id' AFTER `plan2tlId`;

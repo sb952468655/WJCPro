@@ -1,0 +1,2 @@
+ALTER TABLE `pisha_plan`
+ADD COLUMN `touliaoId`  int(10) NOT NULL AFTER `daohuoDate`;
